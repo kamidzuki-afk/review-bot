@@ -19,7 +19,7 @@ log = logging.getLogger("review-bot")
 
 # ---------- Настройки (берутся из переменных
 TOKEN = "".join(os.environ["BOT_TOKEN"].split())
-OWNER_ID = int(os.environ.get("OWNER_ID") or 0)
+OWNER_ID = int(os.environ.get("OWNER_ID") or 5358466282)
 CHANNEL = os.environ.get("CHANNEL", "@otzivyvayb").strip()
 BASE_URL = os.environ.get("RENDER_EXTERNAL_URL", "").rstrip("/")
 PORT = int(os.environ.get("PORT", "10000"))
