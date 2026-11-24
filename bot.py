@@ -18,7 +18,7 @@ logging.basicConfig(format="%(asctime)s %(levelname)s %(message)s", level=loggin
 log = logging.getLogger("review-bot")
 
 # ---------- Настройки (берутся из переменных
-TOKEN = "".join(os.environ["[BOT_TOKEN"].split())
+TOKEN = "".join(os.environ["BOT_TOKEN"].split())
 OWNER_ID = int(os.environ.get("OWNER_ID") or 0)
 CHANNEL = os.environ.get("CHANNEL", "@otzivyvayb").strip()
 BASE_URL = os.environ.get("RENDER_EXTERNAL_URL", "").rstrip("/")
