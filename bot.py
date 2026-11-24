@@ -17,10 +17,10 @@ from telegram.ext import (
 logging.basicConfig(format="%(asctime)s %(levelname)s %(message)s", level=logging.INFO)
 log = logging.getLogger("review-bot")
 
-# ---------- Настройки (берутся из переменных окружения на Render) ----------
-TOKEN = os.environ["BOT_TOKEN"]
+# ---------- Настройки (берутся из переменных
+TOKEN = "".join(os.environ["[BOT_TOKEN"].split())
 OWNER_ID = int(os.environ.get("OWNER_ID") or 0)
-CHANNEL = os.environ.get("CHANNEL", "@otzivyvayb")
+CHANNEL = os.environ.get("CHANNEL", "@otzivyvayb").strip()
 BASE_URL = os.environ.get("RENDER_EXTERNAL_URL", "").rstrip("/")
 PORT = int(os.environ.get("PORT", "10000"))
 SECRET = hashlib.sha256(TOKEN.encode()).hexdigest()[:48]
